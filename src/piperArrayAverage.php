@@ -6,7 +6,8 @@ use Khalyomede\PiperContract;
 
 class PiperArrayAverage implements PiperContract {
 	public static function execute( $input ) {
-		return array_sum($input) / count($input);
+		$count = count($input);
+		return $count === 0 ? $count : array_sum($input) / count($input);
 	}
 
 	public static function do( $parameter = null ) {
